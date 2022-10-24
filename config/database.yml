@@ -1,0 +1,16 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: postgres
+  username: postgres
+  password: Pass!2022
+  pool: 5
+
+development:
+  <<: *default
+  database: dev_blog
+
+
+test:
+  <<: *default
+  database: test_blog
